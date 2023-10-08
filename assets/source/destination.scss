@@ -1,0 +1,296 @@
+@import "colors";
+
+%estfontStylesTitle {
+  font-family: "Barlow-Condensed";
+  font-size: 0.9rem;
+  color: $Purple-light;
+  letter-spacing: 2.36px;
+}
+%estfontStylesVal {
+  font-family: "Bellefair";
+  font-size: 1.7rem;
+  color: $White;
+}
+.destination-container {
+  background: url("../img/destination/background-destination-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  .main-destination {
+    padding: 15px;
+    .main-title {
+      font-size: 1.5rem;
+      color: $White;
+      text-align: center;
+      font-family: "Barlow-Condensed";
+      font-weight: 400;
+      letter-spacing: 2.7px;
+      margin: 0;
+      .number {
+        color: $Gray;
+        margin-right: 10px;
+      }
+    }
+    .planet {
+      display: flex;
+      flex-direction: column;
+      height: 90%;
+      .wrapper {
+        &:nth-child(1) {
+          .planet-img-container {
+            margin: auto;
+            position: relative;
+            height: 30vh;
+            padding: 15% 0;
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+              width: 55%;
+              opacity: 0;
+              transition: all 0.5s ease-in-out;
+            }
+          }
+        }
+        &:nth-child(2) {
+          overflow: hidden;
+          .destination-nav {
+            ul {
+              list-style: none;
+              display: flex;
+              justify-content: space-evenly;
+              padding: 0;
+              margin: 0;
+              li {
+                height: fit-content;
+                overflow: hidden;
+                a {
+                  text-decoration: none;
+                  display: block;
+                  font-family: "Barlow-Condensed";
+                  font-size: 1.2rem;
+                  color: $Purple-light;
+                  height: 100%;
+                  line-height: 6vh;
+                  transition: all 0.2s ease-in-out;
+                  letter-spacing: 2.36px;
+                }
+                .subIndicator {
+                  width: 80%;
+                  display: block;
+                  align-self: center;
+                  height: 2px;
+                  background-color: $White;
+                  margin-left: 5px;
+                  opacity: 0;
+                  transform: translateX(-55px);
+                  transition: all 0.2s ease-in-out;
+                }
+                &:hover {
+                  .subIndicator {
+                    transform: translateX(0px);
+                    opacity: 1;
+                  }
+                }
+              }
+            }
+          }
+          .slider {
+            width: 400%;
+            .slider-content {
+              display: flex;
+              transform: translateX(0%);
+              transition: all 0.7s ease-in-out;
+              .planet-data {
+                width: 100%;
+                opacity: 0;
+                .planet-name {
+                  font-family: "Bellefair";
+                  font-size: 3rem;
+                  text-align: center;
+                  color: $White;
+                  font-weight: 400;
+                  margin: 15px 0;
+                }
+                .description {
+                  font-family: "Barlow-Condensed";
+                  font-size: 1rem;
+                  color: $Purple-light;
+                  text-align: center;
+                  line-height: 1.5rem;
+                  width: 100%;
+                  margin: auto 0;
+                }
+                .estimations-values {
+                  .separator {
+                    height: 2px !important;
+                    border: none;
+                    background-color: $Gray-dark !important;
+                    margin: 10% auto;
+                    width: 97%;
+                  }
+                  .wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 5% 0;
+                    gap: 15px;
+                  }
+                  .avg-distance-title {
+                    @extend %estfontStylesTitle;
+                  }
+                  .avg-distance-value {
+                    @extend %estfontStylesVal;
+                  }
+                  .est-travel-title {
+                    @extend %estfontStylesTitle;
+                  }
+                  .est-travel-value {
+                    @extend %estfontStylesVal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .destination-container {
+    background-image: url("../img/destination/background-destination-tablet.jpg");
+    .main-destination {
+      width: 94%;
+      padding: 0;
+      margin: auto;
+      .main-title {
+        text-align: left;
+        margin-top: 5%;
+      }
+      .planet {
+        .wrapper {
+          &:nth-child(1) {
+            .planet-img-container {
+              width: 40%;
+              margin: 0 auto;
+              img {
+                width: 100%;
+              }
+            }
+          }
+          &:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            .destination-nav {
+              order: 1;
+              width: 40%;
+              align-self: center;
+            }
+            .slider {
+              order: 2;
+              .slider-content {
+                .planet-data {
+                  .planet-name {
+                    font-size: 5rem;
+                  }
+                  .description {
+                    width: 70%;
+                    margin: auto;
+                  }
+                  .estimations-values {
+                    width: 70%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    flex-wrap: wrap;
+                    margin: 3% auto;
+                    .separator {
+                      width: 100%;
+                      margin: 5% 0 3%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .destination-container {
+    background-image: url("../img/destination/background-destination-desktop.jpg");
+    .main-destination {
+      height: calc(100vh - 20.68vh);
+      width: 80%;
+      margin-top: 5%;
+      .main-title {
+        margin: 0;
+      }
+      .planet {
+        flex-direction: row;
+        margin: auto;
+        gap: 200px;
+        .wrapper {
+          flex: 1;
+
+          &:nth-child(1) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .planet-img-container {
+              width: 85%;
+            }
+          }
+          &:nth-child(2) {
+            .destination-nav {
+              width: 60%;
+              align-self: flex-start;
+              margin-bottom: 5%;
+              ul {
+                justify-content: space-between;
+              }
+            }
+            .slider {
+              .slider-content {
+                .planet-data {
+                  .planet-name {
+                    font-size: 4rem;
+                    margin: 1% 0;
+                    text-align: left;
+                  }
+                  .description {
+                    margin: 0;
+                    text-align: left;
+                    width: 100%;
+                    font-size: 1.125rem;
+                  }
+                  .estimations-values {
+                    margin: 3% 0;
+                    width: 100%;
+                    display: block;
+                    .separator {
+                      width: 97%;
+                    }
+                    .wrapper {
+                      margin: 0;
+                      align-items: flex-start;
+                      float: left;
+                      width: 50%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

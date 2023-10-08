@@ -1,0 +1,191 @@
+@import "colors";
+
+.technology-container {
+  background-image: url("../img/technology/background-technology-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .main-technology {
+    overflow: hidden;
+    .technology-title {
+      font-size: 1.3rem;
+      color: $White;
+      text-align: center;
+      font-family: "Barlow-Condensed";
+      font-weight: 400;
+      letter-spacing: 2.7px;
+      margin: 0;
+      order: 1;
+      .number {
+        color: $Gray;
+        margin-right: 10px;
+      }
+    }
+    .technology {
+      .technology-img-container {
+        margin: 7% 0;
+        position: relative;
+        height: 35vh;
+        overflow: hidden;
+        img {
+          position: absolute;
+          transition: all 0.5s ease-in-out;
+          transform: translateX(100%);
+        }
+      }
+      .indexes-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        button {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          border: 2px solid $Gray;
+          background-color: transparent;
+          color: $White;
+          font-family: "Bellefair";
+          font-size: 1.2rem;
+          transition: all 0.2s ease-in-out;
+          cursor: pointer;
+          &:hover {
+            border-color: $Gray-opaque;
+          }
+        }
+      }
+      .wrapper {
+        padding: 0 20px 50px;
+        .slider-text {
+          display: none;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+          .technology-title {
+            text-align: center;
+            margin-top: 5%;
+            span {
+              color: $Purple-light;
+              font-size: 0.9rem;
+              font-family: "Barlow-Condensed";
+            }
+            h2 {
+              font-family: "Bellefair";
+              font-weight: 400;
+              margin: 2% 0;
+            }
+          }
+          .description {
+            color: $Purple-light;
+            text-align: center;
+            line-height: 1.5rem;
+            font-family: "Barlow";
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .technology-container {
+    background-image: url("../img/technology/background-technology-tablet.jpg");
+    .main-technology {
+      overflow: hidden;
+      .technology-title {
+        text-align: left;
+        margin-top: 30px;
+        margin-left: 25px;
+        .number {
+        }
+      }
+      .technology {
+        .technology-img-container {
+          img {
+          }
+        }
+        .indexes-container {
+          button {
+          }
+        }
+        .wrapper {
+          width: 59.7%;
+          margin: auto;
+          .slider-text {
+            .technology-title {
+              span {
+              }
+              h2 {
+              }
+            }
+            .description {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .technology-container {
+    background-image: url("../img/technology/background-technology-desktop.jpg");
+
+    .main-technology {
+      width: auto;
+      margin:5% 8% 0;
+      .technology-title {
+        margin-top:0 ;
+        font-size: 1.5rem;
+      }
+      .technology {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        height: calc(100vh - 16.6256vh);
+        .technology-img-container {
+          order: 3;
+          height: 70vh;
+          width: 38%;
+          margin: 0;
+          img {
+            height: 100%;
+          }
+        }
+        .indexes-container {
+          order: 1;
+          flex-direction: column;
+          margin-left: 2%;
+          gap: 35px;
+          button {
+            height: 80px;
+            width: 80px;
+            font-size: 2rem;
+          }
+        }
+        .wrapper {
+          order: 2;
+          width: 33%;
+          padding: 0;
+          .slider-text {
+            .technology-title {
+              text-align: left;
+              margin: 0;
+              span {
+              }
+              h2 {
+                font-size: 3.5rem;
+              }
+            }
+            .description {
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.index-active {
+  background-color: $White !important;
+  color: $Blue-very-dark !important;
+  border: none !important;
+}

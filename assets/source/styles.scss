@@ -1,0 +1,23 @@
+@use "header";
+@use "home";
+@use "destination";
+@use "crew";
+@use "technology";
+@import "fonts";
+
+html {
+  font-size: 16px;
+}
+body {
+  min-height: auto;
+}
+img {
+  height: auto;
+  width: 100%;
+}
+.show-img{
+  opacity: 1!important;
+}
+.show-block{
+  display: block!important;
+}
