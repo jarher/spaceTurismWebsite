@@ -70,36 +70,29 @@
         }
       }
       &:nth-child(2) {
-        .explore {
-          border: none;
-          background-color: $White;
+        a {
+          font-family: "Bellefair";
+          font-size: 2rem;
+          text-decoration: none;
+          color: $Blue-very-dark;
+          display: block;
           border-radius: 50%;
-          border: none;
+          background-color: $White;
+          line-height: 150px;
           height: 150px;
           width: 150px;
           margin: 5% 0;
           overflow: hidden;
           cursor: pointer;
           transition: all 0.3s ease-in-out;
+          text-align: center;
           &:hover {
             outline: 30px solid $White-translucid-1;
-          }
-          a {
-            font-family: "Bellefair";
-            font-size: 2rem;
-            text-decoration: none;
-            color: $Blue-very-dark;
-            display: block;
-            height: 100%;
-            width: 100%;
-            line-height: 150px;
-            @media (min-width: 768px) {
-              line-height: 242px;
-            }
           }
           @media (min-width: 768px) {
             height: 242px;
             width: 242px;
+            line-height: 242px;
           }
         }
       }

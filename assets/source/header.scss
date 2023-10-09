@@ -25,7 +25,7 @@ header {
   }
   .main-nav {
     background-color: $White-translucid-004;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px) saturate(1.5);
     position: fixed;
     bottom: 0;
     right: 0;

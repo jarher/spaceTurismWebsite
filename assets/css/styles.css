@@ -23,7 +23,7 @@ header .menu-icon {
 }
 header .main-nav {
   background-color: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px) saturate(1.5);
   position: fixed;
   bottom: 0;
   right: 0;
@@ -236,40 +236,31 @@ header .main-nav a {
     margin-left: 6%;
   }
 }
-.home-container .main-home .wrapper:nth-child(2) .explore {
-  border: none;
-  background-color: rgb(255, 255, 255);
+.home-container .main-home .wrapper:nth-child(2) a {
+  font-family: "Bellefair";
+  font-size: 2rem;
+  text-decoration: none;
+  color: rgb(11, 13, 23);
+  display: block;
   border-radius: 50%;
-  border: none;
+  background-color: rgb(255, 255, 255);
+  line-height: 150px;
   height: 150px;
   width: 150px;
   margin: 5% 0;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  text-align: center;
 }
-.home-container .main-home .wrapper:nth-child(2) .explore:hover {
+.home-container .main-home .wrapper:nth-child(2) a:hover {
   outline: 30px solid rgba(255, 255, 255, 0.1);
 }
-.home-container .main-home .wrapper:nth-child(2) .explore a {
-  font-family: "Bellefair";
-  font-size: 2rem;
-  text-decoration: none;
-  color: rgb(11, 13, 23);
-  display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 150px;
-}
 @media (min-width: 768px) {
-  .home-container .main-home .wrapper:nth-child(2) .explore a {
-    line-height: 242px;
-  }
-}
-@media (min-width: 768px) {
-  .home-container .main-home .wrapper:nth-child(2) .explore {
+  .home-container .main-home .wrapper:nth-child(2) a {
     height: 242px;
     width: 242px;
+    line-height: 242px;
   }
 }
 @media (min-width: 1024px) {
@@ -512,6 +503,9 @@ header .main-nav a {
   }
   .destination-container .main-destination .planet .wrapper:nth-child(1) .planet-img-container {
     width: 85%;
+  }
+  .destination-container .main-destination .planet .wrapper:nth-child(2) {
+    justify-content: center;
   }
   .destination-container .main-destination .planet .wrapper:nth-child(2) .destination-nav {
     width: 60%;
@@ -875,7 +869,7 @@ header .main-nav a {
   }
   .technology-container .main-technology .technology .technology-img-container {
     order: 3;
-    height: 70vh;
+    height: 65vh;
     width: 38%;
     margin: 0;
   }
